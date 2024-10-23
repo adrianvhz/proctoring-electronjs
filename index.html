@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+	<!-- <title>PROEDUCATIVE</title> -->
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<!-- <tab-group new-tab-button="true" sortable="true">
+		<style>
+			/* Add custom styles */
+			.my-badge {
+			  background-color: #327BB1;
+			}
+			.my-custom-tab {
+			  color: #d135d1;
+			  font-style: italic;
+			  font-weight: bold;
+			}
+		  </style>
+	</tab-group> -->
+
+
+
+	<!-- <video style="width: 640px; height: 480px;"></video> -->
+    <button id="startBtn" class="button is-primary">Start</button>
+    <button id="stopBtn" class="button is-warning">Stop</button>
+    <!-- <button id="videoSelectBtn" class="button is-text">fuentes</button>
+    <select id="selectMenu"></select> -->
+
+
+
+
+	<!-- <script src="node_modules/electron-tabs/dist/electron-tabs.js"></script>
+	<script>
+		// Select tab-group
+		const tabGroup = document.querySelector("tab-group");
+		// Setup the default tab which is created when the "New Tab" button is clicked
+		tabGroup.setDefaultTab({
+			title: "Google",
+			src: "https://www.google.com",
+			badge: {
+				text: "1",
+				classname: "my-badge"
+			},
+			iconURL: "https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png",
+			// iconURL: "mark-github.svg",
+			active: true
+		});
+	  
+		// Do stuff
+		const tab = tabGroup.addTab({
+			title: "FRI",
+			// src: "path/to/new-page.html",
+			src: "https://fri.proeducative.com",
+			active: true,
+			iconURL: "https://yt3.googleusercontent.com/ytc/AIdro_lOgQG5R3roujQGX6RUq9h3bKqwps8Df4eJvjRz4LXPcg=s900-c-k-c0x00ffffff-no-rj",
+			webviewAttributes: {
+				allowpopups: true
+			}
+		});
+		// console.log(tab.webview);
+		tab.on("webview-ready", (tab) => {
+			console.log(tab);
+			tab.webview.addEventListener('did-navigate-in-page', function(evt) {
+				console.log(evt);
+				console.log(123);
+				tabGroup.addTab({
+					title: "test",
+					// src: "path/to/new-page.html",
+					src: "https://www.google.com",
+					iconURL: "https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+				});
+			});
+			tab.setTitle(tab.webview.getTitle());
+		});
+		const pos = tab.getPosition();
+		console.log("Tab position is " + pos);
+	</script> -->
+	<script src="./renderer.js"></script>
+</body>
+</html>
